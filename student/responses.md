@@ -8,11 +8,11 @@ Answers and recorded model results from `submission.json`. This document does no
 
 - Record ID: eb657096-660f-4429-90ca-630277912623
 
-- Record revision: 2
+- Record revision: 144
 
 - Model hash: fnv1a-adee3cf8
 
-- Readiness: Marked incomplete or not ready; missing: assumptions, model, prediction, verification, claim, reflection, aiUse, execution
+- Readiness: Marked incomplete or not ready; missing: prediction, verification, claim, reflection, aiUse, execution
 
 ## Supplied setup (instructor supplied)
 
@@ -35,20 +35,29 @@ Iy=5000 kg·m²; target=+0.12 rad/s²; competing=-750 N-m; density=1.225 kg/m³;
 
 **Student response:**
 ```
-Using M = r × F: the tail sits aft of the CG (negative x), and the elevator force points downward (positive Fz). That cross product gives a positive moment — nose-up, per the stated convention.
+Using M = r × F: the tail sits aft of the CG (negative x), and the elevator force points downward (positive Fz). That cross product gives a positive moment noseup, per the stated convention.
 ```
 
 ### assumptions
 **Prompt:** Explain one supplied assumption and what could invalidate it: planar motion, fixed reference, local linear effectiveness, no trim or damping.
 
 **Student response:**
-_Missing — no response supplied._
+```
+Planar motion assumes the aircraft only pitches in a single vertical plane, with no roll, yaw, or sideslip coupling. This would be invalidated by any asymmetric input or disturbance — such as a gust, aileron deflection, or engine-out condition — that introduces motion or forces outside that plane.
+```
 
 ### model
 **Prompt:** Write your demand, dynamic-pressure, coefficient and moment equations. Identify which quantities are supplied and which are unknown.
 
 **Student response:**
-_Missing — no response supplied._
+```
+Demand The target angular acceleration is 0.12 rad/s². Using Newton's second law for rotation, the required net moment is Iy × α = 5000 × 0.12 = 600 N·m. Dynamic pressure q∞ = ½ρV² = ½ × 1.225 × 40² = 980 Pa
+Coefficient increment Convert −5° to radians: −5 × π/180 = −0.0873 rad
+ΔCm = Cmδ × δe = (−0.8) × (−0.0873) = 0.0698
+Elevator moment: M_elevator = ΔCm × q∞ × S × c = 0.0698 × 980 × 16 × 1.5 = 1642 N·m
+Net moment (elevator plus the competing moment):
+ΣMy = 1642 + (−750) = 892 N·m
+```
 
 ### prediction
 **Prompt:** Before running your own implementation, predict the sign of its elevator moment and the effect of halving airspeed. Explain the competing moment.
