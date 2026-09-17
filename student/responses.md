@@ -6,13 +6,13 @@ Answers and recorded model results from `submission.json`. This document does no
 
 - Schema: week07.submission/v1
 
-- Record ID: 7b3ec4e8-8354-4b96-b296-b95c7e020a4a
+- Record ID: eb657096-660f-4429-90ca-630277912623
 
-- Record revision: 1
+- Record revision: 2
 
 - Model hash: fnv1a-adee3cf8
 
-- Readiness: Marked incomplete or not ready; missing: physics, assumptions, model, prediction, verification, claim, reflection, aiUse, execution
+- Readiness: Marked incomplete or not ready; missing: assumptions, model, prediction, verification, claim, reflection, aiUse, execution
 
 ## Supplied setup (instructor supplied)
 
@@ -34,7 +34,9 @@ Iy=5000 kg·m²; target=+0.12 rad/s²; competing=-750 N-m; density=1.225 kg/m³;
 **Prompt:** Explain why a downward force aft of the CG gives a positive nose-up moment.
 
 **Student response:**
-_Missing — no response supplied._
+```
+Using M = r × F: the tail sits aft of the CG (negative x), and the elevator force points downward (positive Fz). That cross product gives a positive moment — nose-up, per the stated convention.
+```
 
 ### assumptions
 **Prompt:** Explain one supplied assumption and what could invalidate it: planar motion, fixed reference, local linear effectiveness, no trim or damping.

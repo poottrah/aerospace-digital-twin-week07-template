@@ -3,7 +3,6 @@
   "readiness": {
     "ready": false,
     "missing": [
-      "physics",
       "assumptions",
       "model",
       "prediction",
@@ -15,8 +14,8 @@
     ]
   },
   "record": {
-    "id": "7b3ec4e8-8354-4b96-b296-b95c7e020a4a",
-    "revision": "1",
+    "id": "eb657096-660f-4429-90ca-630277912623",
+    "revision": "2",
     "model": {
       "moduleId": "controls",
       "modelId": "week07-student-model",
@@ -43,7 +42,7 @@
       "physics": {
         "suppliedBy": "student",
         "locked": false,
-        "text": ""
+        "text": "Using M = r × F: the tail sits aft of the CG (negative x), and the elevator force points downward (positive Fz). That cross product gives a positive moment — nose-up, per the stated convention."
       },
       "assumptions": {
         "suppliedBy": "student",
